@@ -16,7 +16,9 @@ async function setup() {
   const w = window.innerWidth
   const h = window.innerHeight
 
-  const renderer = new WebGLRenderer({ canvas, antialias: false, alpha: false })
+  const dpr = window.devicePixelRatio
+  const renderer = new WebGLRenderer({ canvas, antialias: true, alpha: false })
+  renderer.setPixelRatio(dpr)
   renderer.setSize(w, h)
   renderer.autoClear = false
 
@@ -24,7 +26,7 @@ async function setup() {
   const geometry = new PlaneGeometry(2, 2)
 
   const pipeline = createPipeline(renderer, camera, geometry, w, h, RENDER_SCALE)
-  const charController = await createCharacter(pipeline.finalTarget.texture, w, h)
+  const charController = await createCharacter(pipeline.finalTarget.texture, w * dpr, h * dpr)
   character = charController
 
   const clock = new Clock()
@@ -51,7 +53,7 @@ async function setup() {
     const nh = window.innerHeight
     renderer.setSize(nw, nh)
     pipeline.resize(nw, nh, RENDER_SCALE)
-    charController.resize(nw, nh)
+    charController.resize(nw * dpr, nh * dpr)
   }
 
   window.addEventListener('resize', onResize)
