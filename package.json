@@ -1,0 +1,28 @@
+{
+  "name": "persona3reload-menu",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "animejs": "^4.3.6",
+    "howler": "^2.2.4",
+    "iconify-icon": "^3.0.2",
+    "three": "^0.184.0",
+    "vue": "^3.5.0",
+    "vue-i18n": "^11.4.6"
+  },
+  "devDependencies": {
+    "@types/howler": "^2.2.12",
+    "@types/node": "^26.0.0",
+    "@types/three": "^0.184.1",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^6.0.0",
+    "vue-tsc": "^2.2.0"
+  }
+}

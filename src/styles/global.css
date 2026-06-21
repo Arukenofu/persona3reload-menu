@@ -1,0 +1,180 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+}
+
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+}
+
+body {
+    margin: 0;
+    line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+button {
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: none;
+    cursor: pointer;
+    border: none;
+}
+
+hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+}
+
+img,
+svg,
+video {
+    display: block;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+@font-face {
+    font-family: "Rodin Pro";
+    src: url("/fonts/Rodin Pro EB.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rodin Pro";
+    src: url("/fonts/Rubik-ExtraBold.ttf") format("truetype");
+    unicode-range: U+0400-04FF, U+0500-052F;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rodin Pro Medium";
+    src: url("/fonts/Rodin Pro DB.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rodin Pro Medium";
+    src: url("/fonts/Rubik-SemiBold.ttf") format("truetype");
+    unicode-range: U+0400-04FF, U+0500-052F;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rodin Pro Bold";
+    src: url("/fonts/Rodin Pro UB.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rodin Pro Bold";
+    src: url("/fonts/Rubik-Black.ttf") format("truetype");
+    unicode-range: U+0400-04FF, U+0500-052F;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "NewRodin Pro";
+    src: url("/fonts/NewRodin Pro DB.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "NewRodin Pro";
+    src: url("/fonts/Rubik-Bold.ttf") format("truetype");
+    unicode-range: U+0400-04FF, U+0500-052F;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Skip Std B";
+    src: url("/fonts/Skip Std B.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Skip Std B";
+    src: url("/fonts/Rubik-ExtraBold.ttf") format("truetype");
+    unicode-range: U+0400-04FF, U+0500-052F;
+    font-display: swap;
+}
+
+:root {
+    --color-fg: #fff;
+    --color-bg: #015fcc;
+    --color-bg-dark: #031f64;
+    --color-red: #f00;
+    --color-muted: #808080;
+    --color-pink: #fd77d9;
+    --color-button-1: #16cffb;
+    --color-button-2: #7de6fd;
+    --color-button-3: #77fefc;
+    --color-border: #5d6a88;
+
+    --font-rodin: "Rodin Pro Bold", sans-serif;
+    --font-new-rodin: "NewRodin Pro", sans-serif;
+    --font-skip: "Skip Std B", sans-serif;
+
+    --shadow-under:
+        0 1px 6px rgba(0, 0, 0, 0.5), 0 -1px 6px rgba(0, 0, 0, 0.5),
+        1px 0 6px rgba(0, 0, 0, 0.5), -1px 0 6px rgba(0, 0, 0, 0.5);
+    --text-shadow-under:
+        0 1px 6px rgba(0, 0, 0, 0.5), 0 -1px 6px rgba(0, 0, 0, 0.5),
+        1px 0 6px rgba(0, 0, 0, 0.5), -1px 0 6px rgba(0, 0, 0, 0.5);
+    --text-shadow-border:
+        0 2px 0 var(--color-border), 0 -2px 0 var(--color-border),
+        2px 0 0 var(--color-border), -2px 0 0 var(--color-border),
+        -2px -2px 0 var(--color-border), 2px -2px 0 var(--color-border),
+        2px 2px 0 var(--color-border), -2px 2px 0 var(--color-border),
+        0 1px 6px rgba(0, 0, 0, 0.5), 0 -1px 6px rgba(0, 0, 0, 0.5),
+        1px 0 6px rgba(0, 0, 0, 0.5), -1px 0 6px rgba(0, 0, 0, 0.5);
+    --shadow-red: 3px -6px 0 var(--color-red);
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-rodin);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 400ms linear;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
